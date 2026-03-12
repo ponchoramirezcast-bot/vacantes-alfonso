@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Vacantes para Alfonso Ramirez</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f5f5f5;
+padding:40px;
+}
+
+table{
+background:white;
+border-collapse:collapse;
+width:100%;
+}
+
+td,th{
+border:1px solid #ddd;
+padding:10px;
+}
+
+th{
+background:#333;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Vacantes recomendadas</h1>
+<h3>Actualización automática diaria</h3>
+
+<table id="jobs">
+
+<tr>
+<th>Vacante</th>
+<th>Empresa</th>
+<th>Ciudad</th>
+<th>Sueldo</th>
+<th>Link</th>
+</tr>
+
+</table>
+
+<script>
+
+fetch("jobs.json")
+.then(r=>r.json())
+.then(data=>{
+
+let table = document.getElementById("jobs")
+
+data.forEach(job=>{
+
+let row = table.insertRow()
+
+row.insertCell(0).innerText = job.vacante
+row.insertCell(1).innerText = job.empresa
+row.insertCell(2).innerText = job.ciudad
+row.insertCell(3).innerText = job.sueldo
+
+let link = document.createElement("a")
+link.href = job.link
+link.innerText = "Aplicar"
+
+row.insertCell(4).appendChild(link)
+
+})
+
+})
+
+</script>
+
+</body>
+</html>
