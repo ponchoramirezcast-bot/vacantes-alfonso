@@ -1,0 +1,16 @@
+[
+ {
+  "vacante":"Supervisor de Logística",
+  "empresa":"Empresa ejemplo",
+  "ciudad":"Guadalajara",
+  "sueldo":"$30,000",
+  "link":"https://example.com"
+ },
+ {
+  "vacante":"Warehouse Manager",
+  "empresa":"Empresa ejemplo",
+  "ciudad":"Querétaro",
+  "sueldo":"$40,000",
+  "link":"https://example.com"
+ }
+]
